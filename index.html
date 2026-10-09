@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nano Hero — Learn nano interactively</title>
+  <meta name="description" content="Learn the nano text editor with hands-on drills in a real in-browser nano simulator.">
+  <meta name="color-scheme" content="dark light">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-content">
+      <a href="#/" class="logo" aria-label="Nano Hero home">
+        <span class="logo-mark" aria-hidden="true">^X</span>
+        <span class="logo-text">Nano<span>Hero</span></span>
+      </a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#/lessons" class="nav-link" data-nav="lessons">Lessons</a>
+        <a href="#/playground" class="nav-link" data-nav="playground">Playground</a>
+        <a href="#/cheatsheet" class="nav-link" data-nav="cheatsheet">Cheatsheet</a>
+        <a href="#/lessons" class="progress-chip" id="headerProgressLink" title="Lessons completed">✓ <span id="headerProgress">0/0</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="app" class="main"></main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <span>Nano Hero — master the editor, rule the terminal 🦸</span>
+      <span>
+        <a href="https://www.nano-editor.org/" target="_blank" rel="noopener">nano-editor.org</a> ·
+        <a href="https://www.nano-editor.org/dist/latest/cheatsheet.html" target="_blank" rel="noopener">Official cheatsheet</a> ·
+        Inspired by <a href="https://www.vim-hero.com/" target="_blank" rel="noopener">vim-hero</a>
+      </span>
+    </div>
+  </footer>
+
+  <div class="toasts" id="toasts" aria-live="polite"></div>
+
+  <noscript><p style="padding:24px;text-align:center">Nano Hero needs JavaScript to run the nano simulator.</p></noscript>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
